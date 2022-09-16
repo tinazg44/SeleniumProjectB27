@@ -29,7 +29,8 @@ public class T2_LinkTextPractice {
        // WebElement abTestLink = driver.findElement(By.linkText("A/B Testing"));
 
         WebElement abTestLink = driver.findElement(By.partialLinkText("A/B"));
-        abTestLink.click();
+        abTestLink.click(); // this is another way na po-gornoto
+
 
 
         String expectedTitle = "No A/B Test";
