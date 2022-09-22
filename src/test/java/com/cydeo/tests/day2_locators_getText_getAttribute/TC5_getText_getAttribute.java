@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class TC5_getText_getAttribute {
     public static void main(String[] args) {
         /*
-        1- Open a chrome browser
+        1- Open a Chrome browser
 2- Go to: https://practice.cydeo.com/registration_form
 3- Verify header text is as expected:
   Expected: Registration form

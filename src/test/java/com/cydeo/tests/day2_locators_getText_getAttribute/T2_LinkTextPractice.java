@@ -25,7 +25,7 @@ public class T2_LinkTextPractice {
         driver.get("https://practice.cydeo.com");
 
 
-       // driver.findElement(By.linkText("A/B Testing")).click(); we can use this way but everey time we need to writing it and instead we just need to assing it like the second row
+       // driver.findElement(By.linkText("A/B Testing")).click(); we can use this way but every time we need to writing it and instead we just need to assing it like the second row
        // WebElement abTestLink = driver.findElement(By.linkText("A/B Testing"));
 
         WebElement abTestLink = driver.findElement(By.partialLinkText("A/B"));

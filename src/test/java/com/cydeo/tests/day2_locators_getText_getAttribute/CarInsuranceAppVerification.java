@@ -29,9 +29,9 @@ CarInsuranceAppVerification
         driver.get("https://www.qa1.excelsoirinsurance.com/login");
 
         //3. verify url
-        String excpectedURL = "excelsoirinsurance"; // comes from requirement
+        String expectedURL = "excelsoirinsurance"; // comes from requirement
         String actualURL = driver.getCurrentUrl(); // comes from browser
-        if(actualURL.contains(excpectedURL)){
+        if(actualURL.contains(expectedURL)){
             System.out.println("URL verification is passed");
         }else{
             System.out.println("URL verification is failed");
