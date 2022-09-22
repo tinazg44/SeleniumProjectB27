@@ -19,9 +19,9 @@ Expected: “Log in to ZeroBank”
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
-        driver.get("https://zero.webappsecurity.com/login.html");
+        driver.get("http://zero.webappsecurity.com/login.html");
 
-        WebElement headerText = driver.findElement(By.tagName("h2"));
+        WebElement headerText = driver.findElement(By.tagName("h3"));
         String expectedHeader = "Log in to ZeroBank";
         String actualHeader = headerText.getText();
         if(actualHeader.equals(expectedHeader)){
