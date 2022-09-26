@@ -42,7 +42,7 @@ Expected: Title should start with “apple” word
             System.out.println("Title ver failed");
         }
 
-       // driver.quit();
+        driver.quit();
 
 
     }

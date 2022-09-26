@@ -29,5 +29,7 @@ Expected: “Log in to ZeroBank”
         }else{
             System.out.println("Header ver is failed");
         }
+        driver.quit();
     }
+
 }

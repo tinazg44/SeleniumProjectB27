@@ -1,9 +1,11 @@
 package com.cydeo.tests.day3_locators_cssSelector_xpath;
 
 import com.cydeo.utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
-public class TC3_cssSelector {
+public class TC3_getText_cssSelector {
     /*
     1- Open a chrome browser
 2- Go to: https://login1.nextbasecrm.com/
@@ -30,6 +32,21 @@ Expected: Log In
 
         //locate with using css selector by onclick attribute:
         //WebElement logInBtn = driver.findElement(By.cssSelector("input[onclick=\"BX.addClass(this, 'wait');\"]"));
+
+        // Locate with using cssSelector by class attribute:
+        WebElement logInBtn = driver.findElement(By.cssSelector("input[class='login-btn']"));
+
+        String expectedLoginBtnText = "Log In";
+        String actualLoginBtnText = logInBtn.getAttribute("value");
+
+        if(actualLoginBtnText.equals(expectedLoginBtnText)){
+            System.out.println("Login text verification passed!");
+        }else{
+            System.out.println("Login text verification failed!");
+        }
+
+        driver.quit();
+
 
 
 

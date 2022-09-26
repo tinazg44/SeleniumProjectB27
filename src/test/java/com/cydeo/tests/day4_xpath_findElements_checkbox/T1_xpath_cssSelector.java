@@ -33,13 +33,17 @@ T1_xpath_cssSelector
 
         driver.get("https://practice.cydeo.com/forgot_password");
 
+        // Locate using cssSelector with class attribute syntax #2
         WebElement homeLink1 = driver.findElement(By.cssSelector(".nav-link"));
 
+        // Locate using cssSelector with class attribute syntax #1
         WebElement homeLink2 = driver.findElement(By.cssSelector("a[class='nav-link']"));
 
+
+        // Locate using xpath with class attribute syntax #1
         WebElement homeLink3 = driver.findElement(By.xpath("//a[@class='nav-link']"));
 
-        b. “Forgot password” header
+       // b. “Forgot password” header
         // Locate using cssSelector with class attribute syntax #1
         WebElement forgotPassword1 = driver.findElement(By.cssSelector("div[class='example']>h2"));
 

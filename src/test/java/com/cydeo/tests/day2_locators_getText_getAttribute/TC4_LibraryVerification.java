@@ -18,23 +18,29 @@ displayed
      */
     public static void main(String[] args) {
 
+        //1. Open Chrome browser
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
+        //2. Go to https://library2.cydeo.com/login.html
+        driver.get("https://library2.cydeo.com/login.html");
 
-        driver.get("https://library2.cybertekschool.com/login.html");
+        //3. Enter username: “incorrect@email.com”
+        WebElement usernameInput = driver.findElement(By.className("form-control"));
+        usernameInput.sendKeys("incorrect@email.com");
 
-        WebElement usernameInput = driver.findElement(By.id("inputEmail"));
-       usernameInput.sendKeys("incorrect@email.com");
+        //4. Enter password: “incorrect password”
+        WebElement passwordInput = driver.findElement(By.id("inputPassword"));
+        passwordInput.sendKeys("incorrect password");
 
+        //5. Click to Sign in button
+        WebElement signinBtn = driver.findElement(By.tagName("button"));
+        signinBtn.click();
 
-       WebElement passwordInput = driver.findElement((By.id("inputPassword")));
-       passwordInput.sendKeys(("incorrect password"));
+        //6. Verify: visually “Sorry, Wrong Email or Password” displayed
 
-       // clicking the sign in button
-        WebElement signInButton = driver.findElement(By.tagName("button"));
-        signInButton.click();
+        driver.quit();
 
 
 

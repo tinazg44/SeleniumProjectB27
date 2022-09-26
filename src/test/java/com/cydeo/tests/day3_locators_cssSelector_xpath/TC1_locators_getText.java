@@ -28,8 +28,10 @@ Expected: Incorrect login or password
         inputUserName.sendKeys("incorrect");
         // Mac: option + enter tazi opciq e short cut to store vaiables kato Webelement inputUsserpassword
         //Windows; alt + Enter
+
         WebElement inputUserPassword = driver.findElement(By.name("USER_PASSWORD"));
         inputUserPassword.sendKeys("incorrect"); // sendKeys() ni pomaga da typeing the incorrect duma
+
         WebElement loginBtn = driver.findElement(By.className("login-btn"));
         loginBtn.click();
 
